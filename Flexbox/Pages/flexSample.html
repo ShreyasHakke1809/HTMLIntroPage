@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox Learning</title>
+    <style>
+        body
+        {
+            padding: 2em;
+        }
+        /* header class headerContainer is defining with dot */
+        .headerContainer
+        {
+            display: flex;
+            flex-flow: column wrap;
+            align-content: center;
+            background: tomato;
+            font-weight: bold;
+            padding: 10px;
+        }
+        .footerContainer
+        {
+            display: flex;
+            flex-flow: column wrap;
+            align-content: center;
+            background: lightgreen;
+            font-weight: bold;
+            padding: 10px;
+        }
+        .mainContainer
+        {
+            display: flex;
+            flex-flow:row wrap ;
+            font-weight: bold;
+            text-align: center;
+        }
+        .mainContentItem
+        {
+            text-align: left;
+            background: deepskyblue;
+        }
+        article
+        {
+            padding: 10px;
+            margin: 10px;
+            background: aqua;
+        }
+        .Leftsidebar{ background: gold;}
+        .Rightsidebar{ background: hotpink;}
+        .Sidebaritem
+        {
+            flex: 1 0 0;
+            border: 0px solid green;
+        }
+        .mainContentItem{ flex: 3 0px;}
+        .Leftsidebar{ order: 1}
+        .Rightsidebar{ order: 3;}
+        .mainContentItem{ order: 2;}
+    </style>
+</head>
+<body>
+    <!-- here class = "headerContainer" for first headr -->
+    <header class = "headerContainer"><h1>HEADER-Sample FlexBox Example</h1></header>
+    <div class="mainContainer">
+        <section class="mainContentItem">
+            <article><h2>First Article</h2><p>Before you start writing, you should make sure you have a 
+                clear idea of what you want to say and how you’re going to say it. There are a few key 
+                steps you can follow to make sure you’re prepared:</p></article>
+            <article><h2>First Article</h2><p>Before you start writing, you should make sure you have a 
+                    clear idea of what you want to say and how you’re going to say it. There are a few key 
+                    steps you can follow to make sure you’re prepared:</p></article>
+            <article><h2>First Article</h2><p>Before you start writing, you should make sure you have a 
+                        clear idea of what you want to say and how you’re going to say it. There are a few key 
+                        steps you can follow to make sure you’re prepared:</p></article>
+        </section>
+        <sideBar class="Sidebaritem Leftsidebar">Left Side Bar</sideBar>
+        <sideBar class="Sidebaritem Rightsidebar">Right Side Bar</sideBar>
+    </div>
+    <footer class="footerContainer">FOOTER</footer>
+</body>
+</html>
